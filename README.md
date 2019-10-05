@@ -19,6 +19,7 @@
 ```
 CONNECTION_STRING="mongodb://<your_connection_string/<database_name>"
 PORT=3000
+SECRET_KEY=<your_jwt_secret_key>
 ```
 
 ## Clonning and Running
