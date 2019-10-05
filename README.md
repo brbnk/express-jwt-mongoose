@@ -4,8 +4,9 @@
   <img src="https://static.imasters.com.br/wp-content/uploads/2017/09/mongodb-logo-rgb-j6w271g1xn-768x203.jpg" width="200px"> 
   <span> &nbsp &nbsp &nbsp &nbsp</span>
   <img src="https://miro.medium.com/max/3200/1*t9d16DIcJg_-dEg0X_qTWg.png" width="200px">
+  <span> &nbsp &nbsp &nbsp &nbsp</span>
+  <img src="https://projecthydro.org/wp-content/uploads/2019/01/passportJS.png" width="70px">
 </div>
-
 <br />
 
 <div align="center">
