@@ -1,6 +1,7 @@
-const { CONNECTION_STRING, PORT } = process.env
+const { CONNECTION_STRING, PORT, SECRET_KEY } = process.env
 
 module.exports = { 
     connection_string: CONNECTION_STRING,
-    port: PORT
+    port: PORT,
+    secretKey: SECRET_KEY
 }
