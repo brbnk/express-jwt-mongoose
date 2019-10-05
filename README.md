@@ -32,7 +32,6 @@ yarn dev
 
 ## Authtentication Process
 <span> source: <a href="https://blog.usejournal.com/sessionless-authentication-withe-jwts-with-node-express-passport-js-69b059e4b22c"> Sessionless Authentication using JWTs (with Node + Express + Passport JS) </a>
-<span> &nbsp &nbsp &nbsp &nbsp</span>
  <div align="center">
    <img src="https://miro.medium.com/max/629/1*88LV6mHq-M5c-19Q2H72Nw.png">
  </div>
