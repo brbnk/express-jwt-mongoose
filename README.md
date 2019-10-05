@@ -10,7 +10,7 @@
 <br />
 
 <div align="center">
-  <h3> Basic App build with Express, Mongoose and Jason Web Tokens </h3>
+  <h3> Basic App build with Express, Mongoose, Jason Web Tokens and Passport.js </h3>
   <p> Understanding the basics of these technologies! </p>
 </div>
 
