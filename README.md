@@ -4,12 +4,13 @@
   <img src="https://static.imasters.com.br/wp-content/uploads/2017/09/mongodb-logo-rgb-j6w271g1xn-768x203.jpg" width="200px"> 
   <span> &nbsp &nbsp &nbsp &nbsp</span>
   <img src="https://miro.medium.com/max/3200/1*t9d16DIcJg_-dEg0X_qTWg.png" width="200px">
+  <span> &nbsp &nbsp &nbsp &nbsp</span>
+  <img src="https://projecthydro.org/wp-content/uploads/2019/01/passportJS.png" width="70px">
 </div>
-
 <br />
 
 <div align="center">
-  <h3> Basic App build with Express, Mongoose and Jason Web Tokens </h3>
+  <h3> Basic App build with Express, Mongoose, Jason Web Tokens and Passport.js </h3>
   <p> Understanding the basics of these technologies! </p>
 </div>
 
@@ -28,3 +29,10 @@ git clone https://github.com/BrNaka/express-jwt-mongoose.git
 yarn install
 yarn dev
 ```
+
+## Authtentication Process
+<span> source: <a href="https://blog.usejournal.com/sessionless-authentication-withe-jwts-with-node-express-passport-js-69b059e4b22c"> Sessionless Authentication using JWTs (with Node + Express + Passport JS) </a>
+ <div align="center">
+   <img src="https://miro.medium.com/max/629/1*88LV6mHq-M5c-19Q2H72Nw.png">
+ </div>
+
