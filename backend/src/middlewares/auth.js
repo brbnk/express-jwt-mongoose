@@ -16,20 +16,20 @@ passport.use(new LocalStrategy({
     async function (username, password, done) { 
         await User.findOne({ email: username }, (err, user) => { 
             if (err) {
-                return done()
+                return done(err)
             }
 
             if (!user) { 
-                return done(null, false, { message: 'Incorrect username.' })
+                return done(null, false, { message: 'Incorrect Username' })
             }
 
             user.compare(password, user.password)
                 .then(match => { 
                     if (!match) {
-                        return done(null, false, { message: 'Incorrect password.' })
+                        return done(null, false, { message: 'Incorrect Password' })
                     }
         
-                    return done(null, true)
+                    return done(null, user)
                 })
         })
     }
