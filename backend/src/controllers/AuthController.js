@@ -15,5 +15,8 @@ module.exports = {
                     return res.json({ message: "User created!" })
                 })
             })
+    },
+    validator(req, res) { 
+        res.status(200).json({ message: "OK" })
     }
 }

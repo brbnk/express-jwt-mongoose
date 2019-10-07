@@ -38,5 +38,8 @@ module.exports = {
             chunkFilename: '[id].css',
             ignoreOrder: false
         })
-    ]
+    ],
+    devServer: { 
+        historyApiFallback: true
+    }
 }

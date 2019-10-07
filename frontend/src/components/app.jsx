@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter } from 'react-router-dom'
 
-import Login from './auth/login'
+import { store } from '../store/index'
+import { Provider } from 'react-redux'
+
+import Routes from './routes/routes'
 
 const App = () => { 
     return (
-        <BrowserRouter> 
-            <Login />
-        </BrowserRouter>
+        <Provider store={ store } > 
+            <Routes />
+        </Provider>
     )
 }
 

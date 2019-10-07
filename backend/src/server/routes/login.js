@@ -33,5 +33,10 @@ module.exports = app => {
     router.post("/register", 
         AuthController.register)
 
+    router.post("/token_validation",
+        passport.authenticate('jwt', { session: false }),
+        AuthController.validator
+    )
+
     app.use("/auth", router)
 }

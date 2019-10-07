@@ -20,7 +20,7 @@ passport.use(new LocalStrategy({
             }
 
             if (!user) { 
-                return done(null, false, { message: 'Incorrect Username' })
+                return done(null, false, { message: "User doesn't exist" })
             }
 
             user.compare(password, user.password)

@@ -1,29 +1,38 @@
 import React, { useState } from 'react'
 import api from '../../services/api'
 
-const Login = ({ history, validation }) => {
+const SignIn = ({ setForm }) => { 
+    const [ name, setName ] = useState('')
     const [ email, setEmail ] = useState('')
     const [ password, setPassword ] = useState('')
     const [ error, setError ] = useState('')
-    const { authorized, unauthorized } = validation 
 
     async function handleSubmit(e) {
         e.preventDefault();
        
-        await api.post("/auth/login", { email, password }, { withCredentials: true })
-            .then(_ => { 
+        await api.post("/auth/register", { name, email, password }, { withCredentials: true })
+            .then(res => { 
                 setError('')
-                authorized()
-                history.push('/protected')
+                setForm('login')
             })
             .catch(err => { 
-                setError(err.response.data.message)
-                unauthorized()
+                const { message } = err.response.data
+                setAuth(false)
+                setError(message)
             })
     }
 
-    return(
+    return (
         <form className="auth-form" onSubmit={ handleSubmit }>
+            <div>
+                <label htmlFor='name'> Name: </label>
+                <input 
+                    type='text' 
+                    id='name' 
+                    placeholder='Name'
+                    value={ name }
+                    onChange={ (e) => setName(e.target.value) } />
+            </div>
             <div>
                 <label htmlFor='email'> Email: </label>
                 <input 
@@ -44,9 +53,9 @@ const Login = ({ history, validation }) => {
                     onChange={ (e) => setPassword(e.target.value) }/>
             </div>
             <p> { error } </p>
-            <button type="submit" className='btn'> Login </button>
+            <button type="submit" className='btn'> Sign In </button>
         </form>
     )
 }
 
-export default Login
+export default SignIn
