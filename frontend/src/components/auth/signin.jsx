@@ -1,11 +1,21 @@
 import React, { useState } from 'react'
 import api from '../../services/api'
 
+import { useSpring, animated } from 'react-spring'
+
 const SignIn = ({ setForm }) => { 
     const [ name, setName ] = useState('')
     const [ email, setEmail ] = useState('')
     const [ password, setPassword ] = useState('')
     const [ error, setError ] = useState('')
+
+    const props = useSpring({ 
+        from: { opacity: 0 },
+        opacity: 1,
+        config: { 
+            duration: 500
+        }
+    })
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -23,7 +33,7 @@ const SignIn = ({ setForm }) => {
     }
 
     return (
-        <form className="auth-form" onSubmit={ handleSubmit }>
+        <animated.form style={props} className="auth-form" onSubmit={ handleSubmit }>
             <div>
                 <label htmlFor='name'> Name: </label>
                 <input 
@@ -54,7 +64,7 @@ const SignIn = ({ setForm }) => {
             </div>
             <p> { error } </p>
             <button type="submit" className='btn'> Sign In </button>
-        </form>
+        </animated.form>
     )
 }
 

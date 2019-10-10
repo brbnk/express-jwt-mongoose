@@ -5,6 +5,7 @@ import api from '../../services/api'
 
 import Auth from '../auth/auth'
 import Protected from '../home/protected'
+import PublicComponent from '../public/public'
 
 const Routes = () => { 
     const { isAuthenticated } = useSelector(state => state)
@@ -31,11 +32,11 @@ const Routes = () => {
             <Switch>
                 <Route path='/'
                     exact
-                    render= { () => isAuthenticated ? <Redirect to='/protected' /> : <Redirect to='/auth' /> }
+                    component={ PublicComponent }
                 /> 
                 <Route 
                     path='/protected' 
-                    render={ () => isAuthenticated ? <Protected logout={ unauthorized }/> : <Redirect to='/auth' /> } 
+                    render={ () => isAuthenticated ? <Protected /> : <Redirect to={{ pathname: '/auth', state: { message: "Não autorizado!" }}} /> } 
                 />
                 <Route 
                     path='/auth' 
