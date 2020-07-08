@@ -5,7 +5,7 @@
   <span> &nbsp &nbsp &nbsp &nbsp</span>
   <img src="https://miro.medium.com/max/3200/1*t9d16DIcJg_-dEg0X_qTWg.png" width="200px">
   <span> &nbsp &nbsp &nbsp &nbsp</span>
-  <img src="https://projecthydro.org/wp-content/uploads/2019/01/passportJS.png" width="70px">
+  <img src="https://images.ctfassets.net/vwq10xzbe6iz/tnwT7PN9aBmT7vgkTtGhV/940f001eb249a42904cd40e64d13c7e9/passportJS-300x300.png" width="70px">
 </div>
 <br />
 
@@ -25,7 +25,7 @@ SECRET_KEY=<your_jwt_secret_key>
 
 ## Clonning and Running
 ```
-git clone https://github.com/BrNaka/express-jwt-mongoose.git
+git clone https://github.com/brbnk/express-jwt-mongoose.git
 yarn install
 yarn dev
 ```
